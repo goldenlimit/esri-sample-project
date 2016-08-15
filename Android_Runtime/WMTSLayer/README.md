@@ -19,7 +19,7 @@ E/ArcGIS.TileCache: Exception occur:0,2,2
 java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String java.lang.String.toLowerCase()' on a null object reference
 ```
 
-Here is a screenshot ![alt text](http:// "Java error")
+Here is a screenshot ![alt text](https://github.com/goldenlimit/esri-sample-project/blob/master/Android_Runtime/WMTSLayer/error.png "Java error")
 
 ## Resources
 
