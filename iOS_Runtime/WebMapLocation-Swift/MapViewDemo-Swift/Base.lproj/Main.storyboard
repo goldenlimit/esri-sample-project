@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapViewDemo_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="83B-tN-4HB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8E-ed-bib" customClass="AGSMapView">
+                                <rect key="frame" x="0.0" y="48" width="600" height="547"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="ArcGIS.bundle/esri.png" translatesAutoresizingMaskIntoConstraints="NO" id="u8d-Da-3P4">
+                                <rect key="frame" x="8" y="576" width="16" height="16"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EBY-Kt-aW6">
+                                <rect key="frame" x="511" y="14" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchBasemap:" destination="BYZ-38-t0r" eventType="valueChanged" id="Cfc-ga-fVr"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Center current location in Webmap" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOP-t2-Ow6">
+                                <rect key="frame" x="20" y="9" width="154" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="EZL-ZI-GP7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Switch Basemap" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjA-a7-gif">
+                                <rect key="frame" x="443" y="7" width="55" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EBY-Kt-aW6" firstAttribute="trailing" secondItem="83B-tN-4HB" secondAttribute="trailingMargin" constant="-20" id="7kl-f1-CrT"/>
+                            <constraint firstItem="EBY-Kt-aW6" firstAttribute="leading" secondItem="sjA-a7-gif" secondAttribute="trailing" constant="13" id="Fdr-Ss-wDI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="I8E-ed-bib" secondAttribute="bottom" constant="5" id="JvT-sz-prg"/>
+                            <constraint firstItem="bOP-t2-Ow6" firstAttribute="leading" secondItem="83B-tN-4HB" secondAttribute="leadingMargin" id="MQN-vD-Ogs"/>
+                            <constraint firstItem="bOP-t2-Ow6" firstAttribute="top" secondItem="83B-tN-4HB" secondAttribute="top" constant="9" id="NNv-av-rO2"/>
+                            <constraint firstItem="bOP-t2-Ow6" firstAttribute="bottom" secondItem="sjA-a7-gif" secondAttribute="bottom" constant="-1" id="a6g-ur-lYX"/>
+                            <constraint firstItem="sjA-a7-gif" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-13" id="eWH-yv-Yul"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u8d-Da-3P4" secondAttribute="bottom" constant="8" id="ekp-Lu-q4d"/>
+                            <constraint firstItem="u8d-Da-3P4" firstAttribute="leading" secondItem="83B-tN-4HB" secondAttribute="leading" constant="8" id="gOt-AA-InW"/>
+                            <constraint firstAttribute="trailing" secondItem="I8E-ed-bib" secondAttribute="trailing" id="ieZ-Eh-99o"/>
+                            <constraint firstItem="EBY-Kt-aW6" firstAttribute="top" secondItem="sjA-a7-gif" secondAttribute="top" constant="7" id="jcw-uy-qzI"/>
+                            <constraint firstItem="EBY-Kt-aW6" firstAttribute="bottom" secondItem="sjA-a7-gif" secondAttribute="bottom" constant="-7" id="oH3-z0-Nv0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EBY-Kt-aW6" secondAttribute="trailing" id="rdW-Gy-Jgp"/>
+                            <constraint firstItem="I8E-ed-bib" firstAttribute="top" secondItem="83B-tN-4HB" secondAttribute="top" constant="48" id="sxp-gH-0jJ"/>
+                            <constraint firstItem="I8E-ed-bib" firstAttribute="top" secondItem="sjA-a7-gif" secondAttribute="bottom" constant="-4" id="tkV-i4-36L"/>
+                            <constraint firstItem="I8E-ed-bib" firstAttribute="leading" secondItem="83B-tN-4HB" secondAttribute="leading" id="zUL-Us-LLF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rdW-Gy-Jgp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="I8E-ed-bib" id="hpQ-jY-ZUU"/>
+                        <outlet property="switchBtn" destination="EBY-Kt-aW6" id="y4h-na-bnB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327" y="159"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ArcGIS.bundle/esri.png" width="75" height="75"/>
+    </resources>
+</document>
