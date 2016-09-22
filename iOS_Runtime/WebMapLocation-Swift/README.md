@@ -32,7 +32,7 @@ For more information about system requirements, please check: [System requiremen
         self.webmap.delegate = self
         self.webmap.openIntoMapView(self.mapView)
 ```
-
+&nbsp;
 
 3. Use AGSWebMapDelegate to trigger this method "webMap:didLoadLayer:", then pass the current GPS/GPX location
 
@@ -41,6 +41,7 @@ For more information about system requirements, please check: [System requiremen
         currentLocation = self.mapView.locationDisplay.location
         print(currentLocation)
 ```
+&nbsp;
 
 4. Use webmap.switchBasemapOnMapView to switch the basemap for webmap 
 
