@@ -4,7 +4,7 @@
 
 Using ArcGIS Runtime SDK for iOS 10.2.5 to load a webmap, and then use GPS/GPX location to center the webmap mapview
 
-This sample will guide you how to add selection color around the features when you click on AGSFeatureTableLayer. 
+This sample will guide you how to add your current location and display on webmap mapview. 
 
 Demo:
 

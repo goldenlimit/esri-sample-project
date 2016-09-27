@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapViewDemo_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkF-Ii-ZYV" customClass="AGSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AttributionText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iQ-CE-jmG">
+                                        <rect key="frame" x="0.0" y="20" width="529" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="YPo-tP-6g9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Esri" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="K41-DM-nEL">
+                                        <rect key="frame" x="529" y="20" width="70" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Iu1-0F-Xcx"/>
+                                            <constraint firstAttribute="height" constant="35" id="rls-Zf-uJf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="4iQ-CE-jmG" firstAttribute="top" secondItem="KkF-Ii-ZYV" secondAttribute="top" constant="20" id="0yq-ta-36q"/>
+                                    <constraint firstItem="K41-DM-nEL" firstAttribute="leading" secondItem="4iQ-CE-jmG" secondAttribute="trailing" id="H0Z-lC-K1v"/>
+                                    <constraint firstItem="4iQ-CE-jmG" firstAttribute="leading" secondItem="KkF-Ii-ZYV" secondAttribute="leading" id="XVX-Fn-ZUw"/>
+                                    <constraint firstItem="K41-DM-nEL" firstAttribute="top" secondItem="KkF-Ii-ZYV" secondAttribute="top" constant="20" id="anh-fQ-uG5"/>
+                                    <constraint firstAttribute="trailing" secondItem="K41-DM-nEL" secondAttribute="trailing" constant="1" id="lZo-GN-cYg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KkF-Ii-ZYV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="H2K-JX-HfF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KkF-Ii-ZYV" secondAttribute="bottom" id="QeK-Kz-DYE"/>
+                            <constraint firstAttribute="trailing" secondItem="KkF-Ii-ZYV" secondAttribute="trailing" id="Tnt-0b-4R1"/>
+                            <constraint firstItem="KkF-Ii-ZYV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qaf-2H-9J9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="attributionLabel" destination="4iQ-CE-jmG" id="JIH-6s-VJe"/>
+                        <outlet property="esriURL" destination="K41-DM-nEL" id="gyj-yR-Z1h"/>
+                        <outlet property="mapView" destination="KkF-Ii-ZYV" id="sv4-ZN-zZy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="387"/>
+        </scene>
+    </scenes>
+</document>
