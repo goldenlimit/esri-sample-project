@@ -1,8 +1,11 @@
-# WebMap Center Current Location
+# Read Offline GDB With WMTSLayer as basemap
 
 ## About
 
 Using ArcGIS Runtime SDK for iOS 10.2.5 to load an open source WMTSLayer, and add local geodatabase featureTableLayer as operational layer on top of WMTSLayer to show the data
+
+Currently, we have already submitted a [BUG-000094940 Segmentation fault thrown when using WMTS layer with Swift]
+This sample shows that it works with Objective-C
 
 Demo:
 
