@@ -40,7 +40,9 @@ Add AGSWMTSInfoDelegate in viewDidLoad, and triggered this delegat: wmtsInfoDidL
     //Triggered by wmtsInfo did load, get populate all the wmtsLayer info
     NSArray *layerInfos = [wmtsInfo layerInfos];
     
-    //Since third party wmts service, we need to get useful information from the xml file. The XML file content an arry of layers, therefore in order to view one specific tile, we need to load one element from the arry.
+    //Since third party wmts service, we need to get useful information from the xml file. 
+    //The XML file content an arry of layers, therefore in order to view one specific tile. 
+    //We need to load one element from the arry.
     
     //Get layerInfo and spatial reference from tileMatrixSet
     AGSWMTSLayerInfo *layerInfo = layerInfos[1];
