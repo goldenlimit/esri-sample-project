@@ -15,6 +15,7 @@
 		3E15A16B1AE852F300A7D40D /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3E15A16A1AE852F300A7D40D /* ArcGIS.bundle */; };
 		F341A2771D99F0E1000EBCEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341A2761D99F0E1000EBCEB /* ViewController.swift */; };
 		F341A2791D99F0E9000EBCEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341A2781D99F0E9000EBCEB /* AppDelegate.swift */; };
+		F341A27D1D9DD9C2000EBCEB /* AGSMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341A27C1D9DD9C2000EBCEB /* AGSMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3E15A16A1AE852F300A7D40D /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = $HOME/Library/SDKs/ArcGIS/iOS/Frameworks/Static/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle; sourceTree = "<absolute>"; };
 		F341A2761D99F0E1000EBCEB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F341A2781D99F0E9000EBCEB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F341A27C1D9DD9C2000EBCEB /* AGSMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				F341A2781D99F0E9000EBCEB /* AppDelegate.swift */,
 				F341A2761D99F0E1000EBCEB /* ViewController.swift */,
+				F341A27C1D9DD9C2000EBCEB /* AGSMap.swift */,
 				3E15A14A1AE84CEA00A7D40D /* Main.storyboard */,
 				3E15A14D1AE84CEA00A7D40D /* Images.xcassets */,
 				3E15A14F1AE84CEA00A7D40D /* LaunchScreen.xib */,
@@ -158,6 +161,7 @@
 			files = (
 				F341A2791D99F0E9000EBCEB /* AppDelegate.swift in Sources */,
 				F341A2771D99F0E1000EBCEB /* ViewController.swift in Sources */,
+				F341A27D1D9DD9C2000EBCEB /* AGSMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

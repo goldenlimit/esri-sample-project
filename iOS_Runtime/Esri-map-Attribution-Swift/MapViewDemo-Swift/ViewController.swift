@@ -22,19 +22,23 @@ class ViewController: UIViewController, UITextViewDelegate {
     
     private var tiledLayer: AGSArcGISTiledLayer!
     var map:AGSMap!
-    var intialViewPoint: AGSViewpoint!
+    var currentViewPoint: AGSViewpoint!
+    var currentLOD: AGSViewpoint!
+    var ymin: Double!
+    var xmin: Double!
+    var ymax: Double!
+    var xmax: Double!
+    var scale: Double!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //create an instance of a map with ESRI topographic basemap
-        self.tiledLayer = AGSArcGISTiledLayer(URL: NSURL(string: "http://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer")!)
+        self.tiledLayer = AGSArcGISTiledLayer(URL: NSURL(string: "http://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer")!)
         
         self.map = AGSMap(basemap: AGSBasemap(baseLayer: self.tiledLayer))
         
-        self.intialViewPoint = AGSViewpoint(center: AGSPoint(x: -13045884, y: 4036331, spatialReference: AGSSpatialReference.webMercator()), scale: 1e6)
-        
-        self.map.initialViewpoint = self.intialViewPoint
+        map.initialViewpoint = AGSViewpoint(center: AGSPoint(x: -13045884, y: 4036331, spatialReference: AGSSpatialReference.webMercator()), scale: 1e6)
 
         self.mapView.map = self.map
         self.esriURL.delegate = self
@@ -60,7 +64,7 @@ class ViewController: UIViewController, UITextViewDelegate {
                 self.attributionLabel.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.65)
                 self.attributionLabel.textAlignment = NSTextAlignment.Left
                 
-                print(self.tiledLayer.mapServiceInfo!.attributionText)
+                //print(self.tiledLayer.mapServiceInfo!.attributionText)
                 
                 //set the Esri URL clickable URL
                 let esriAttribution = "Powered by Esri"
@@ -76,13 +80,51 @@ class ViewController: UIViewController, UITextViewDelegate {
             }
         }
         
+        //this may not fit for performance since we may call it too often and we can't return anything back
         self.mapView.viewpointChangedHandler = {
             () -> Void in
-            self.intialViewPoint = self.mapView.currentViewpointWithType(AGSViewpointType.BoundingGeometry)
-            print(self.intialViewPoint)
+            
+           
+            self.currentViewPoint = self.mapView.currentViewpointWithType(AGSViewpointType.BoundingGeometry)
+            self.currentLOD = self.mapView.currentViewpointWithType(AGSViewpointType.CenterAndScale)
+            do {
+                let jsonBbox = try self.currentViewPoint.toJSON()
+                let jsonScale = try self.currentLOD.toJSON()
+                
+                //print(jsonScale)
+                //print(jsonBbox)
+                
+              //check the current bound
+             if let targetGeometry = jsonBbox["targetGeometry"] as? [String: AnyObject]{
+                if let ymax = targetGeometry["ymax"] as? Double {
+                    print("Ymax: \(ymax)")
+                    self.ymax = ymax
+                }
+                if let xmin = targetGeometry["xmin"] as? Double {
+                    print("Xmin: \(xmin)")
+                    self.xmin = xmin
+                }
+                if let ymin = targetGeometry["ymin"] as? Double {
+                    print("Ymin: \(ymin)")
+                    self.ymin = ymin
+                }
+                if let xmax = targetGeometry["xmax"] as? Double {
+                    print("Xmax: \(xmax)")
+                    self.xmax = xmax
+                }
+            }
+               //check the current scale
+                if let currentScale = jsonScale["scale"] as? Double {
+                    print("Current Scale: \(currentScale)")
+                    self.scale = currentScale
+                    print("--------------------")
+                }
+                
+            } catch let error as NSError {
+                print ("JSON Error: \(error.localizedDescription)")
+                
+            }
         }
-        //self.mapView.currentViewpointWithType(AGSViewpointType)
-        
     }
     
     //MARK: - UITextViewDelegate triggerred when "Powered by Esri" TextView clicked, open Safari to open the webpage
