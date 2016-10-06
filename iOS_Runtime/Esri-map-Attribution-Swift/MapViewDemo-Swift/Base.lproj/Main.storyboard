@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,48 +20,40 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkF-Ii-ZYV" customClass="AGSMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AttributionText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iQ-CE-jmG">
-                                        <rect key="frame" x="0.0" y="20" width="529" height="35"/>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AttributionText" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iQ-CE-jmG">
+                                        <rect key="frame" x="0.0" y="586" width="529" height="14"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="YPo-tP-6g9"/>
+                                            <constraint firstAttribute="height" constant="14" id="L5H-9a-RDC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Esri" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="K41-DM-nEL">
-                                        <rect key="frame" x="529" y="20" width="70" height="35"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="Iu1-0F-Xcx"/>
-                                            <constraint firstAttribute="height" constant="35" id="rls-Zf-uJf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="4iQ-CE-jmG" firstAttribute="top" secondItem="KkF-Ii-ZYV" secondAttribute="top" constant="20" id="0yq-ta-36q"/>
-                                    <constraint firstItem="K41-DM-nEL" firstAttribute="leading" secondItem="4iQ-CE-jmG" secondAttribute="trailing" id="H0Z-lC-K1v"/>
-                                    <constraint firstItem="4iQ-CE-jmG" firstAttribute="leading" secondItem="KkF-Ii-ZYV" secondAttribute="leading" id="XVX-Fn-ZUw"/>
-                                    <constraint firstItem="K41-DM-nEL" firstAttribute="top" secondItem="KkF-Ii-ZYV" secondAttribute="top" constant="20" id="anh-fQ-uG5"/>
-                                    <constraint firstAttribute="trailing" secondItem="K41-DM-nEL" secondAttribute="trailing" constant="1" id="lZo-GN-cYg"/>
+                                    <constraint firstItem="4iQ-CE-jmG" firstAttribute="leading" secondItem="KkF-Ii-ZYV" secondAttribute="leading" id="2Ho-z9-qM6"/>
+                                    <constraint firstItem="4iQ-CE-jmG" firstAttribute="leading" secondItem="KkF-Ii-ZYV" secondAttribute="leading" id="5Nt-UE-aNZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="4iQ-CE-jmG" secondAttribute="trailing" constant="71" id="WVf-ck-YXH"/>
+                                    <constraint firstAttribute="bottom" secondItem="4iQ-CE-jmG" secondAttribute="bottom" id="oUG-vx-VGE"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2Ho-z9-qM6"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KkF-Ii-ZYV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="H2K-JX-HfF"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KkF-Ii-ZYV" secondAttribute="bottom" id="QeK-Kz-DYE"/>
-                            <constraint firstAttribute="trailing" secondItem="KkF-Ii-ZYV" secondAttribute="trailing" id="Tnt-0b-4R1"/>
-                            <constraint firstItem="KkF-Ii-ZYV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qaf-2H-9J9"/>
+                            <constraint firstItem="KkF-Ii-ZYV" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="72W-w8-cCS"/>
+                            <constraint firstAttribute="trailing" secondItem="KkF-Ii-ZYV" secondAttribute="trailing" id="Lrv-Na-Vhb"/>
+                            <constraint firstItem="KkF-Ii-ZYV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oU5-nh-Sef"/>
+                            <constraint firstItem="KkF-Ii-ZYV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qby-Xy-0Sr"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="attributionLabel" destination="4iQ-CE-jmG" id="JIH-6s-VJe"/>
-                        <outlet property="esriURL" destination="K41-DM-nEL" id="gyj-yR-Z1h"/>
                         <outlet property="mapView" destination="KkF-Ii-ZYV" id="sv4-ZN-zZy"/>
                     </connections>
                 </viewController>
