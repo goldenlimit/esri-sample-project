@@ -20,8 +20,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkF-Ii-ZYV" customClass="AGSMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AttributionText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iQ-CE-jmG">
-                                        <rect key="frame" x="0.0" y="20" width="529" height="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AttributionText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iQ-CE-jmG">
+                                        <rect key="frame" x="0.0" y="565" width="550" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="YPo-tP-6g9"/>
                                         </constraints>
@@ -29,25 +29,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Esri" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="K41-DM-nEL">
-                                        <rect key="frame" x="529" y="20" width="70" height="35"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="Iu1-0F-Xcx"/>
-                                            <constraint firstAttribute="height" constant="35" id="rls-Zf-uJf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="4iQ-CE-jmG" firstAttribute="top" secondItem="KkF-Ii-ZYV" secondAttribute="top" constant="20" id="0yq-ta-36q"/>
-                                    <constraint firstItem="K41-DM-nEL" firstAttribute="leading" secondItem="4iQ-CE-jmG" secondAttribute="trailing" id="H0Z-lC-K1v"/>
+                                    <constraint firstAttribute="bottom" secondItem="4iQ-CE-jmG" secondAttribute="bottom" id="WqF-Ye-Mxn"/>
                                     <constraint firstItem="4iQ-CE-jmG" firstAttribute="leading" secondItem="KkF-Ii-ZYV" secondAttribute="leading" id="XVX-Fn-ZUw"/>
-                                    <constraint firstItem="K41-DM-nEL" firstAttribute="top" secondItem="KkF-Ii-ZYV" secondAttribute="top" constant="20" id="anh-fQ-uG5"/>
-                                    <constraint firstAttribute="trailing" secondItem="K41-DM-nEL" secondAttribute="trailing" constant="1" id="lZo-GN-cYg"/>
+                                    <constraint firstAttribute="trailing" secondItem="4iQ-CE-jmG" secondAttribute="trailing" constant="50" id="mXA-Sp-cll"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -61,7 +48,6 @@
                     </view>
                     <connections>
                         <outlet property="attributionLabel" destination="4iQ-CE-jmG" id="JIH-6s-VJe"/>
-                        <outlet property="esriURL" destination="K41-DM-nEL" id="gyj-yR-Z1h"/>
                         <outlet property="mapView" destination="KkF-Ii-ZYV" id="sv4-ZN-zZy"/>
                     </connections>
                 </viewController>
