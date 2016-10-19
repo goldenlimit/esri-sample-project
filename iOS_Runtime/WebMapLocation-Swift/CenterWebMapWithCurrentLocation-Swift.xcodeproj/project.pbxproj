@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		977FEC9F19CBBE2A00E1B97F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977FEC9E19CBBE2A00E1B97F /* AppDelegate.swift */; };
-		977FECA119CBBE2A00E1B97F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977FECA019CBBE2A00E1B97F /* ViewController.swift */; };
 		977FECA419CBBE2A00E1B97F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 977FECA219CBBE2A00E1B97F /* Main.storyboard */; };
 		977FECA619CBBE2A00E1B97F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 977FECA519CBBE2A00E1B97F /* Images.xcassets */; };
 		977FECA919CBBE2A00E1B97F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977FECA719CBBE2A00E1B97F /* LaunchScreen.xib */; };
-		977FECBF19CBBEAD00E1B97F /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 977FECBE19CBBEAD00E1B97F /* ArcGIS.bundle */; };
 		F384BE081D8B1E8C001792A4 /* Los Angeles, CA.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F384BE071D8B1E8C001792A4 /* Los Angeles, CA.gpx */; };
+		F39AC7821DB7E3B800ABDABD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AC7811DB7E3B800ABDABD /* ViewController.swift */; };
+		F3AADD5D1DB7EEBB00858BDF /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F3AADD5C1DB7EEBB00858BDF /* ArcGIS.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		977FEC9919CBBE2A00E1B97F /* CenterWebMapWithCurrentLocation-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CenterWebMapWithCurrentLocation-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		977FEC9D19CBBE2A00E1B97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		977FEC9E19CBBE2A00E1B97F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		977FECA019CBBE2A00E1B97F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		977FECA319CBBE2A00E1B97F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		977FECA519CBBE2A00E1B97F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		977FECA819CBBE2A00E1B97F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		977FECBE19CBBEAD00E1B97F /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = $HOME/Library/SDKs/ArcGIS/iOS/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle; sourceTree = "<group>"; };
 		F384BE071D8B1E8C001792A4 /* Los Angeles, CA.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Los Angeles, CA.gpx"; sourceTree = "<group>"; };
+		F39AC7811DB7E3B800ABDABD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3AADD5C1DB7EEBB00858BDF /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = ../ArcGIS.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				977FEC9E19CBBE2A00E1B97F /* AppDelegate.swift */,
-				977FECA019CBBE2A00E1B97F /* ViewController.swift */,
+				F39AC7811DB7E3B800ABDABD /* ViewController.swift */,
 				977FECA219CBBE2A00E1B97F /* Main.storyboard */,
 				977FECA519CBBE2A00E1B97F /* Images.xcassets */,
 				977FECA719CBBE2A00E1B97F /* LaunchScreen.xib */,
+				F3AADD5C1DB7EEBB00858BDF /* ArcGIS.bundle */,
 				977FEC9C19CBBE2A00E1B97F /* Supporting Files */,
 			);
 			path = "MapViewDemo-Swift";
@@ -72,7 +73,6 @@
 		977FEC9C19CBBE2A00E1B97F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				977FECBE19CBBEAD00E1B97F /* ArcGIS.bundle */,
 				977FEC9D19CBBE2A00E1B97F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -136,10 +136,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3AADD5D1DB7EEBB00858BDF /* ArcGIS.bundle in Resources */,
 				977FECA419CBBE2A00E1B97F /* Main.storyboard in Resources */,
 				F384BE081D8B1E8C001792A4 /* Los Angeles, CA.gpx in Resources */,
 				977FECA919CBBE2A00E1B97F /* LaunchScreen.xib in Resources */,
-				977FECBF19CBBEAD00E1B97F /* ArcGIS.bundle in Resources */,
 				977FECA619CBBE2A00E1B97F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,7 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				977FECA119CBBE2A00E1B97F /* ViewController.swift in Sources */,
+				F39AC7821DB7E3B800ABDABD /* ViewController.swift in Sources */,
 				977FEC9F19CBBE2A00E1B97F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +213,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -250,7 +250,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -263,15 +263,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = $HOME/Library/SDKs/ArcGIS/iOS;
+				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/";
 				INFOPLIST_FILE = "MapViewDemo-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-framework",
 					ArcGIS,
-					"-lc++",
+					"-l",
+					"c++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esri.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "CenterWebMapWithCurrentLocation-Swift";
@@ -283,15 +284,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = $HOME/Library/SDKs/ArcGIS/iOS;
+				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/";
 				INFOPLIST_FILE = "MapViewDemo-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-framework",
 					ArcGIS,
-					"-lc++",
+					"-l",
+					"c++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esri.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "CenterWebMapWithCurrentLocation-Swift";
